@@ -1,0 +1,78 @@
+CentOS7
+systemctl enable httpd.service
+systemctl enable gmetad.service
+systemctl enable gmond.service
+
+
+systemctl restart httpd.service
+systemctl restart gmetad.service
+systemctl restart gmond.service
+
+systemctl stop firewalld.service
+
+/var/lib/ganglia/rrds
+
+
+service gmetad status
+service httpd status
+service gmond status
+firewall-cmd --permanent --zone=public --add-port=80-80/tcp
+firewall-cmd --permanent --zone=public --add-port=8649-8649/tcp
+firewall-cmd --permanent --zone=public --add-port=22-22/tcp
+firewall-cmd --permanent --zone=public --add-port=8652-8652/tcp
+
+systemctl restart firewalld.service
+
+chmod 777 /var/lib/ganglia/dwoo/compiled
+chmod 777 /var/lib/ganglia/dwoo/cache
+chown -R apache:apache /var/www/html/ganglia
+chmod -R 755 /var/www/html/ganglia
+chown -R nobody:nobody /var/lib/ganglia/rrds
+
+
+yum install -y epel-release
+yum install -y ganglia-gmetad ganglia-devel 
+yum install -y ganglia-gmond
+yum install -y rrdtool
+yum install -y httpd
+yum install -y ganglia-web php
+
+
+节点
+yum install -y epel-release
+yum install -y gmond
+
+ganglia配置文件目录：
+
+/etc/ganglia
+
+rrd数据库存放目录：
+
+/var/lib/ganglia/rrds
+
+httpd主站点目录：
+
+/var/www/html
+
+ganglia-web安装目录：
+
+/usr/share/ganglia
+
+ganglia-web配置目录：
+
+/etc/httpd/conf.d/ganglia.conf
+
+ln -s /usr/share/ganglia /var/www/html
+chown -R apache:apache /var/www/html
+chown -R nobody:nobody /var/lib/ganglia/rrds
+chmod -R 755 /var/www/html/ganglia
+
+/etc/httpd/conf.d/ganglia.conf
+
+chmod 777 /var/lib/ganglia/dwoo/compiled
+chmod 777 /var/lib/ganglia/dwoo/cache
+
+
+vi /etc/selinux/config
+
+SELINUX=disable
