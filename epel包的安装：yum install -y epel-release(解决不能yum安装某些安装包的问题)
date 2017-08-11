@@ -1,0 +1,1 @@
+epel包的安装：yum install -y epel-release(解决不能yum安装某些安装包的问题)
