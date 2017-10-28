@@ -1,0 +1,18 @@
+yum list installed | grep php
+
+  CentOs 7.X
+rpm -Uvh https://mirror.webtatic.com/yum/el7/epel-release.rpm
+rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+
+如果想删除上面安装的包，重新安装
+rpm -qa | grep webstatic
+rpm -e  上面搜索到的包即可
+
+
+yum install php70w.x86_64 php70w-cli.x86_64 php70w-common.x86_64 php70w-gd.x86_64 php70w-ldap.x86_64 php70w-mbstring.x86_64 php70w-mcrypt.x86_64 php70w-mysql.x86_64 php70w-pdo.x86_64
+
+yum install php70w-fpm
+
+systemctl restart php-fpm
+
+systemctl enable php-fpm
