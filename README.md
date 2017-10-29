@@ -1,5 +1,3 @@
-![mahua](mahua-logo.jpg)
-
 ##Debian
 
 * nginx
