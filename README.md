@@ -1,25 +1,24 @@
-##Debian
+## Debian
 
 * nginx
-    *nginx.conf
-    *2
+    * nginx.conf
+    * 2
 * php
-    *php-fpm
+    * php-fpm
 * mysql
 
 
-##CentOS7
-* nginx
-    *nginx.conf 
-    *2
-* php
+## CentOS7
+ * nginx
+    * nginx.conf 
+    * 2
+ * php
     *php-fpm
-* mysql
+ * mysql
+## 感谢Github
+ [dodolook](http://dodolook.moe/) 
 
-##感谢Github
-* [dodolook](http://dodolook.moe/) 
-
-##关于作者
+## 关于作者
 
 ```javascript
   var dodolook = {
