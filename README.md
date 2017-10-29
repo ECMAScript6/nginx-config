@@ -1,20 +1,20 @@
 ## Debian
 
 * nginx
-    * nginx.conf
-    * 2
+    * nginx.conf
+    * 2
 * php
     * php-fpm
 * mysql
 
 
 ## CentOS7
- * nginx
-    * nginx.conf 
+* nginx
+    * nginx.conf 
     * 2
- * php
-    *php-fpm
- * mysql
+* php
+    * php-fpm
+* mysql
 ## 感谢Github
  [dodolook](http://dodolook.moe/) 
 
