@@ -1,0 +1,23 @@
+
+yum install zlib-devel gcc make git autoconf autogen automake pkgconfig
+2、下载和安装Netdata（需要root权限）
+cd /usr/local/src/（自己建的目录也行，不一定在这个目录下面）
+wget http://firehol.org/download/netdata/releases/v1.0.0/netdata-1.0.0.tar.gz
+tar -xf netdata-1.0.0.tar.gz
+cd netdata-1.0.0
+./netdata-installer.sh
+
+
+ok. NetData is installed and is running.
+
+Hit http://localhost:19999/ from your browser.
+
+To stop netdata, just kill it, with:
+
+  killall netdata
+
+To start it, just run it:
+
+  /usr/sbin/netdata
+
+Enjoy!
