@@ -16,3 +16,12 @@ yum install php70w-fpm
 systemctl restart php-fpm
 
 systemctl enable php-fpm
+
+php -i|grep Client 
+yum remove php-mysql  
+yum install php70w-mysqlnd.x86_64
+systemctl restart php-fpm
+
+Client API version => mysqlnd 5.0.10 - 20111026 
+Client API library version => mysqlnd 5.0.10 - 20111026 
+Client API version => mysqlnd 5.0.10 - 20111026 
