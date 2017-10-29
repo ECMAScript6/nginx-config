@@ -124,3 +124,38 @@ http {
 }
 
 ######################################################
+一个简单的负载均衡的示例，把www.domain.com均衡到本机不同的端口，也可以改为均衡到不同的地址上。
+http {
+     upstream myproject {
+     server 127.0.0.1:8000 weight=3;
+     server 127.0.0.1:8001;
+     server 127.0.0.1:8002;
+     server 127.0.0.1:8003;
+     }
+
+     server {
+     listen 80;
+     server_name www.domain.com;
+         location / {
+         proxy_pass http://myproject;
+         }
+     }
+}
+
+######################################################
+nginx防盗链
+
+location ~* \.(gif|jpg|png|swf|flv)$ {
+root html
+valid_referers none blocked *.nginxcn.com;
+if ($invalid_referer) {
+rewrite ^/ www.nginx.cn
+#return 404;
+}
+}
+前面的root可以不要如果你在server{}中有设置可以不需要设定
+
+######################################################
+
+
+
