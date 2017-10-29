@@ -1,8 +1,8 @@
 ##Debian
 
 * nginx
-    *  
-    *  
+    *nginx.conf
+    *2
 * php
     *php-fpm
 * mysql
@@ -10,8 +10,8 @@
 
 ##CentOS7
 * nginx
-    *  
-    *  
+    *nginx.conf 
+    *2
 * php
     *php-fpm
 * mysql
