@@ -1,0 +1,4 @@
+mysql> show databases;
+mysql> use dbname;
+mysql> set names utf8;
+mysql>source /usr/database.sql;
