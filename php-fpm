@@ -31,3 +31,15 @@ systemctl restart php-fpm
 Client API version => mysqlnd 5.0.10 - 20111026 
 Client API library version => mysqlnd 5.0.10 - 20111026 
 Client API version => mysqlnd 5.0.10 - 20111026 
+
+
+
+安装的所有php相关的rpm包
+ 
+rpm -qa | grep php
+php-cli-5.3.3-22.el6.x86_64
+
+ 
+ 
+2.按依赖顺序进行删除
+rpm -e php-fpm-5.3.3-22.el6.x86_64
