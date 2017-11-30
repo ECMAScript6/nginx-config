@@ -6,6 +6,8 @@ systemctl enable httpd.service
 systemctl enable gmetad.service
 systemctl enable gmond.service
 
+开机不启动
+systemctl disable nginx.service
 
 systemctl restart httpd.service
 systemctl restart gmetad.service
