@@ -20,6 +20,9 @@ systemctl restart php-fpm
 
 systemctl enable php-fpm
 
+systemctl disable nginx.service
+
+
 php -i|grep Client 
 yum remove php-mysql  
 yum install php70w-mysqlnd.x86_64
