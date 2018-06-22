@@ -1,0 +1,9 @@
+禁止访问configs目录，以及其下所有子目录或文件，配置如下：
+location ^~ configs {
+  deny all;
+}
+
+禁止访问扩展名为bat的文件，配置如下：
+location ~* /.bat {
+  deny all;
+}
