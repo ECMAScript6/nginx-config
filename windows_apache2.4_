@@ -1,0 +1,21 @@
+安装命令
+
+httpd.exe -k install -n "apache81" -f "E:\service\httpd-2.4.20-x64-vc14-r2\Apache24\conf\httpd.conf"
+1
+-k 表示安装为服务 
+-n 指定安装的服务名 
+-f 指定安装的配置文件
+
+卸载命令
+
+httpd.exe -k uninstall -n "apache81"
+1
+命令行切换到 第二个apache 安装目录下的bin目录
+
+切换到命令行
+
+安装命令
+
+httpd.exe -k install -n "apache82" -f "E:\service\httpd-2.4.20-x64-vc14-r2\Apache2\conf\httpd.conf"
+1
+提示安装成功后，打开 windows 服务就可以看到 apache81、 apache82 两项服务
