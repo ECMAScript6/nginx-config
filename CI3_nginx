@@ -33,7 +33,7 @@ $config['uri_protocol']     = "REQUEST_URI";
 ---------------------------------------------------------------------------------------------------
 An alternative configuration, production ready. You don’t need to modify “config.php”, except for removing “index.php”
 
-$config['base_url'] = "";
+$config['base_url'] = "/";
 $config['index_page']       = "";
 $config['uri_protocol']     = "AUTO";
 
