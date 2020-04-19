@@ -1,3 +1,11 @@
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+#自动添加https和http判断
+$config['base_url'] = $protocol.'www.leishaojun.com/';
+
+
+
+
+
 第一种配置
 ---------------------------------------------------------------------------------------------------
 server {
