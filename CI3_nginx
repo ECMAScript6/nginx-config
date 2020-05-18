@@ -121,7 +121,7 @@ http {
         listen       443 ssl;
         server_name  localhost;
         root   /usr/share/nginx/html;
-        autoindex on;
+        autoindex on;#目录浏览
         index  index.php;
 
 
